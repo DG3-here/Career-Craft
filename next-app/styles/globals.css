@@ -1,0 +1,91 @@
+/* 🌈 Import Tailwind */
+@import "tailwindcss";
+
+/* 🌊 Load Tailwind’s core layers */
+@layer base, components, utilities;
+
+/* 🌌 Global body setup */
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle at top left, #0f172a, #1e293b);
+  color: #f8fafc;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* 🌟 Beautiful glowing heading */
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #06b6d4, #60a5fa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+}
+
+/* 🪩 Subheadings */
+p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* 🧊 Glass-style buttons */
+a {
+  display: inline-block;
+  background: rgba(6, 182, 212, 0.2);
+  border: 1px solid rgba(6, 182, 212, 0.5);
+  backdrop-filter: blur(10px);
+  color: #06b6d4;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  background: rgba(6, 182, 212, 0.4);
+  transform: scale(1.05);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.6);
+}
+
+/* 💨 Smooth fade animation for page load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+* {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* 🔮 Scrollbar theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#06b6d4, #38bdf8);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
